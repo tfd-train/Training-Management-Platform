@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>訓練管理整合平台</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+    body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #f1f5f9; }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+
+  <div class="max-w-4xl w-full space-y-8">
+    
+    <!-- Header -->
+    <div class="text-center space-y-2">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-slate-900 text-white text-3xl shadow-lg mb-4">
+        <i class="ri-government-fill"></i>
+      </div>
+      <h1 class="text-3xl font-bold text-slate-900 tracking-tight">訓練管理整合平台</h1>
+      <p class="text-slate-500">臺北市政府消防局教育訓練科</p>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="grid md:grid-cols-2 gap-6 mt-8">
+      
+      <!-- System 1: Training Flow -->
+      <a href="https://您的帳號.github.io/訓練流路Repo網址/" class="group block bg-white rounded-3xl p-8 border border-slate-200 shadow-sm card-hover relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -mr-8 -mt-8 transition group-hover:bg-blue-100"></div>
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-blue-500/30">
+            <i class="ri-flow-chart"></i>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition">訓練流路管理系統</h2>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            規劃年度訓練課程、消防/非消防人員班期安排、甘特圖排程與 A3 報表輸出。
+          </p>
+          <span class="inline-flex items-center text-sm font-bold text-blue-600">
+            進入系統 <i class="ri-arrow-right-line ml-1 transition group-hover:translate-x-1"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- System 2: Venue Booking -->
+      <a href="https://您的帳號.github.io/場地借用Repo網址/" class="group block bg-white rounded-3xl p-8 border border-slate-200 shadow-sm card-hover relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full -mr-8 -mt-8 transition group-hover:bg-indigo-100"></div>
+        <div class="relative z-10">
+          <div class="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-indigo-500/30">
+            <i class="ri-building-2-fill"></i>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-indigo-600 transition">場地借用管理系統</h2>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            訓練場地預約申請、衝突檢核、Google 日曆同步與使用紀錄上傳。
+          </p>
+          <span class="inline-flex items-center text-sm font-bold text-indigo-600">
+            進入系統 <i class="ri-arrow-right-line ml-1 transition group-hover:translate-x-1"></i>
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center text-slate-400 text-xs mt-12">
+      &copy; 2025 Education & Training Section. All rights reserved.
+    </div>
+  </div>
+
+</body>
+</html>
