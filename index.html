@@ -11,11 +11,15 @@
     body { font-family: 'Inter', 'Noto Sans TC', sans-serif; background-color: #f8fafc; }
     .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
+    /* 建構中卡片的灰階效果 */
+    .card-disabled { opacity: 0.8; cursor: default; }
+    .card-disabled:hover { transform: none; box-shadow: none; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-6">
 
-  <div class="max-w-6xl w-full space-y-10">
+  <!-- 容器加寬以容納四張卡片 -->
+  <div class="w-full max-w-[90rem] space-y-10">
     
     <!-- Header -->
     <div class="text-center space-y-3">
@@ -27,18 +31,18 @@
     </div>
 
     <!-- Cards Container -->
-    <!-- 修改：加入 lg:grid-cols-3 讓電腦版顯示三欄 -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- 設定為 1欄(手機) -> 2欄(平板) -> 4欄(電腦) -->
+    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
       
       <!-- System 1: Training Flow (Blue) -->
-      <a href="https://tfd-train.github.io/Training-Flow-Management/" class="group block bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm card-hover relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-40 h-40 bg-blue-50 rounded-bl-[5rem] -mr-10 -mt-10 transition duration-500 group-hover:bg-blue-100"></div>
+      <a href="https://tfd-train.github.io/Training-Flow-Management/" class="group block bg-white rounded-[2rem] p-6 border border-slate-200 shadow-sm card-hover relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-[4rem] -mr-8 -mt-8 transition duration-500 group-hover:bg-blue-100"></div>
         <div class="relative z-10 flex flex-col h-full">
-          <div class="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-blue-500/30">
+          <div class="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white text-2xl mb-5 shadow-lg shadow-blue-500/30">
             <i class="ri-flow-chart"></i>
           </div>
-          <h2 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition">訓練流路管理</h2>
-          <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">
+          <h2 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition">訓練流路管理</h2>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
             規劃年度訓練課程、消防/非消防人員班期安排、甘特圖排程與 A3 報表輸出。
           </p>
           <div class="flex items-center text-sm font-bold text-blue-600 mt-auto">
@@ -48,14 +52,14 @@
       </a>
 
       <!-- System 2: Venue Booking (Indigo) -->
-      <a href="https://tfd-train.github.io/Facility-Booking/" class="group block bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm card-hover relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-40 h-40 bg-indigo-50 rounded-bl-[5rem] -mr-10 -mt-10 transition duration-500 group-hover:bg-indigo-100"></div>
+      <a href="https://tfd-train.github.io/Facility-Booking/" class="group block bg-white rounded-[2rem] p-6 border border-slate-200 shadow-sm card-hover relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-[4rem] -mr-8 -mt-8 transition duration-500 group-hover:bg-indigo-100"></div>
         <div class="relative z-10 flex flex-col h-full">
-          <div class="w-14 h-14 rounded-2xl bg-indigo-600 flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-indigo-500/30">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-white text-2xl mb-5 shadow-lg shadow-indigo-500/30">
             <i class="ri-building-2-fill"></i>
           </div>
-          <h2 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-indigo-600 transition">場地借用管理</h2>
-          <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">
+          <h2 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-indigo-600 transition">場地借用管理</h2>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
             訓練場地預約申請、防撞期檢核、自動同步 Google 日曆與使用紀錄照片上傳。
           </p>
           <div class="flex items-center text-sm font-bold text-indigo-600 mt-auto">
@@ -65,15 +69,15 @@
       </a>
 
       <!-- System 3: EV Training Statistics (Emerald) -->
-      <!-- ⚠️ 請記得將 href 修改為您新系統的 GitHub Pages 網址 -->
-      <a href="https://tfd-train.github.io/Electric-Vehicle/" class="group block bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm card-hover relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-40 h-40 bg-emerald-50 rounded-bl-[5rem] -mr-10 -mt-10 transition duration-500 group-hover:bg-emerald-100"></div>
+      <!-- ⚠️ 記得更換為您的新網址 -->
+      <a href="https://tfd-train.github.io/Electric-Vehicle/" class="group block bg-white rounded-[2rem] p-6 border border-slate-200 shadow-sm card-hover relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-bl-[4rem] -mr-8 -mt-8 transition duration-500 group-hover:bg-emerald-100"></div>
         <div class="relative z-10 flex flex-col h-full">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-600 flex items-center justify-center text-white text-2xl mb-6 shadow-lg shadow-emerald-500/30">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center text-white text-2xl mb-5 shadow-lg shadow-emerald-500/30">
             <i class="ri-charging-pile-2-fill"></i>
           </div>
-          <h2 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-emerald-600 transition">電動車訓練統計</h2>
-          <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">
+          <h2 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-emerald-600 transition">電動車訓練統計</h2>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
             電動車救援訓練場次與人數管理、智慧日曆批次輸入、雲端資料庫同步與報表匯出。
           </p>
           <div class="flex items-center text-sm font-bold text-emerald-600 mt-auto">
@@ -82,8 +86,33 @@
         </div>
       </a>
 
+      <!-- System 4: Physical Fitness (Cyan - New Blue) -->
+      <!-- 🚧 建構中狀態 -->
+      <div class="group block bg-white rounded-[2rem] p-6 border border-dashed border-slate-300 shadow-none relative overflow-hidden card-disabled">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-50 rounded-bl-[4rem] -mr-8 -mt-8"></div>
+        <div class="relative z-10 flex flex-col h-full">
+          <div class="flex justify-between items-start mb-5">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-cyan-500/30">
+              <i class="ri-run-fill"></i>
+            </div>
+            <!-- 建構中標籤 -->
+            <span class="bg-slate-100 text-slate-500 text-[10px] font-bold px-2 py-1 rounded-full border border-slate-200">
+              <i class="ri-hammer-fill mr-1"></i>建構中
+            </span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-400 mb-3">體能成績登載</h2>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+            常年訓練新式體能測驗成績登錄、個人數據追蹤與成績統計分析管理。
+          </p>
+          <div class="flex items-center text-sm font-bold text-slate-300 mt-auto cursor-not-allowed">
+            即將上線 <i class="ri-time-line ml-2"></i>
+          </div>
+        </div>
+      </div>
+
     </div>
 
+    <!-- Footer -->
     <div class="text-center text-slate-400 text-xs mt-12 pt-8 border-t border-slate-200">
       &copy; 2025 Education & Training Section.
     </div>
