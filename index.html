@@ -84,37 +84,34 @@
         </div>
       </a>
 
-      <!-- System 4: Physical Fitness (Cyan - New Blue) -->
-      <!-- 🚧 建構中狀態 -->
-      <div class="group block bg-slate-50 rounded-[2.5rem] p-8 md:p-10 border-2 border-dashed border-slate-300 shadow-none relative overflow-hidden card-disabled h-full">
-        <div class="absolute top-0 right-0 w-48 h-48 bg-cyan-50/50 rounded-bl-[6rem] -mr-12 -mt-12"></div>
+      <!-- System 4: Physical Fitness (Cyan) - 已上線版本 -->
+      <a href="https://tfd-train.github.io/Fitness-Record/" class="group block bg-white rounded-[2.5rem] p-8 md:p-10 border border-slate-200 shadow-lg card-hover relative overflow-hidden h-full">
+        <div class="absolute top-0 right-0 w-48 h-48 bg-cyan-50 rounded-bl-[6rem] -mr-12 -mt-12 transition duration-500 group-hover:bg-cyan-100"></div>
         <div class="relative z-10 flex flex-col h-full">
-          <div class="flex justify-between items-start mb-6">
-            <div class="w-16 h-16 rounded-2xl bg-cyan-600/90 flex items-center justify-center text-white text-3xl shadow-lg shadow-cyan-500/20 grayscale opacity-80">
-              <i class="ri-run-fill"></i>
-            </div>
-            <!-- 建構中標籤 -->
-            <span class="bg-slate-200 text-slate-500 text-xs font-bold px-3 py-1.5 rounded-full border border-slate-300">
-              <i class="ri-hammer-fill mr-1"></i>建構中
-            </span>
+          <div class="w-16 h-16 rounded-2xl bg-cyan-600 flex items-center justify-center text-white text-3xl mb-6 shadow-lg shadow-cyan-500/30">
+            <i class="ri-run-fill"></i>
           </div>
-          <h2 class="text-2xl md:text-3xl font-bold text-slate-400 mb-4">體能成績登載</h2>
-          <p class="text-slate-400 text-base leading-relaxed mb-8 flex-grow">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4 group-hover:text-cyan-600 transition">體能成績管理</h2>
+          <p class="text-slate-500 text-base leading-relaxed mb-8 flex-grow">
             常年訓練新式體能測驗成績登錄、個人數據追蹤與成績統計分析管理。
           </p>
-          <div class="flex items-center text-base font-bold text-slate-400 mt-auto cursor-not-allowed">
-            即將上線 <i class="ri-time-line ml-2 text-xl"></i>
+          <div class="flex items-center text-base font-bold text-cyan-600 mt-auto">
+            進入系統 <i class="ri-arrow-right-line ml-2 text-xl transition-transform group-hover:translate-x-2"></i>
           </div>
         </div>
-      </div>
+      </a>
 
     </div>
 
     <!-- Footer -->
     <div class="text-center text-slate-400 text-sm mt-16 pt-8 border-t border-slate-200">
-      &copy; 2025 Taipei City Fire Department Training Center.
+      &copy; <span id="current-year"></span> Taipei City Fire Department Training Center.
     </div>
   </div>
 
+  <script>
+    // 自動更新頁尾年份
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
